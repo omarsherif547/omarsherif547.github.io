@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+ 
   <header class="nav">
     <div class="nav-inner">
       <a href="#home" class="logo">OMAR<span>.</span>SHERIF</a>
@@ -28,9 +28,9 @@
       </a>
     </div>
   </header>
-
+ 
   <main>
-
+ 
     <!-- HERO -->
     <section id="home" class="hero">
       <div class="hero-content">
@@ -42,7 +42,7 @@
           <a href="https://github.com/omarsherif547" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
         </div>
       </div>
-
+ 
       <div class="waveform" aria-hidden="true">
         <svg viewBox="0 0 1000 240" preserveAspectRatio="none">
           <path id="wavepath" class="wave-path"
@@ -59,7 +59,7 @@
         </div>
       </div>
     </section>
-
+ 
     <!-- ABOUT -->
     <section id="about" class="about reveal">
       <div class="about-text">
@@ -86,13 +86,42 @@
         </div>
       </dl>
     </section>
-
+ 
     <!-- PROJECTS -->
     <section id="projects" class="projects reveal">
       <h2>Projects</h2>
       <div class="project-grid">
-
+ 
         <article class="project-card">
+          <div class="project-illustration" aria-hidden="true">
+            <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+              <path id="lf-track" d="M20,160 C100,160 100,40 200,40 C300,40 300,160 380,160" fill="none" stroke="#2A5C49" stroke-width="10" stroke-linecap="round"/>
+              <g>
+                <rect x="-22" y="-12" width="44" height="24" rx="5" fill="#15392C" stroke="#D98E4A" stroke-width="2"/>
+                <circle cx="-13" cy="13" r="5" fill="#1C4536" stroke="#2A5C49"/>
+                <circle cx="13" cy="13" r="5" fill="#1C4536" stroke="#2A5C49"/>
+                <circle cx="-12" cy="-14" r="2.5" fill="#8FAFA0">
+                  <animate attributeName="fill" values="#8FAFA0;#7BE0C4;#8FAFA0" dur="2s" begin="0s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="-6" cy="-14" r="2.5" fill="#8FAFA0">
+                  <animate attributeName="fill" values="#8FAFA0;#7BE0C4;#8FAFA0" dur="2s" begin="0.2s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="0" cy="-14" r="2.5" fill="#8FAFA0">
+                  <animate attributeName="fill" values="#8FAFA0;#7BE0C4;#8FAFA0" dur="2s" begin="0.4s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="6" cy="-14" r="2.5" fill="#8FAFA0">
+                  <animate attributeName="fill" values="#8FAFA0;#7BE0C4;#8FAFA0" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="12" cy="-14" r="2.5" fill="#8FAFA0">
+                  <animate attributeName="fill" values="#8FAFA0;#7BE0C4;#8FAFA0" dur="2s" begin="0.8s" repeatCount="indefinite"/>
+                </circle>
+                <animateMotion dur="8s" repeatCount="indefinite" rotate="auto">
+                  <mpath href="#lf-track"/>
+                </animateMotion>
+              </g>
+              <text x="372" y="190" text-anchor="end" fill="#8FAFA0" font-size="11" font-family="'IBM Plex Mono', monospace" letter-spacing="2">PID LOOP</text>
+            </svg>
+          </div>
           <p class="project-domain">Control Systems</p>
           <h3>Line Follower Robot</h3>
           <p>Autonomous robot that tracks a line using an IR sensor array, with a PID control loop driving the motors for smooth, stable tracking through curves.</p>
@@ -107,8 +136,44 @@
             <a href="https://github.com/omarsherif547/line-follower-pid" class="project-link" target="_blank" rel="noopener">View source ↗</a>
           </div>
         </article>
-
+ 
         <article class="project-card">
+          <div class="project-illustration" aria-hidden="true">
+            <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+              <rect x="20" y="60" width="60" height="50" rx="4" fill="#15392C" stroke="#2A5C49" stroke-width="1.5"/>
+              <text x="50" y="89" text-anchor="middle" fill="#F1ECE0" font-size="13" font-family="'IBM Plex Mono', monospace" letter-spacing="1">MCU</text>
+ 
+              <line x1="80" y1="75" x2="130" y2="75" stroke="#2A5C49" stroke-width="2"/>
+              <path d="M130,75 l6,-10 l8,20 l8,-20 l8,20 l6,-10" fill="none" stroke="#D98E4A" stroke-width="2" stroke-linejoin="round"/>
+              <text x="148" y="58" text-anchor="middle" fill="#D98E4A" font-size="12" font-family="'IBM Plex Mono', monospace">R</text>
+ 
+              <line x1="176" y1="75" x2="176" y2="108" stroke="#2A5C49" stroke-width="2"/>
+              <line x1="160" y1="108" x2="192" y2="108" stroke="#7BE0C4" stroke-width="3"/>
+              <line x1="160" y1="118" x2="192" y2="118" stroke="#7BE0C4" stroke-width="3"/>
+              <text x="200" y="117" fill="#7BE0C4" font-size="12" font-family="'IBM Plex Mono', monospace">C</text>
+              <line x1="176" y1="118" x2="176" y2="150" stroke="#2A5C49" stroke-width="2"/>
+ 
+              <line x1="164" y1="150" x2="188" y2="150" stroke="#2A5C49" stroke-width="2"/>
+              <line x1="168" y1="156" x2="184" y2="156" stroke="#2A5C49" stroke-width="2"/>
+              <line x1="172" y1="162" x2="180" y2="162" stroke="#2A5C49" stroke-width="2"/>
+ 
+              <line x1="230" y1="30" x2="230" y2="160" stroke="#2A5C49" stroke-width="1.5"/>
+              <line x1="230" y1="160" x2="385" y2="160" stroke="#2A5C49" stroke-width="1.5"/>
+              <line x1="230" y1="55" x2="385" y2="55" stroke="#2A5C49" stroke-width="1.5" stroke-dasharray="4 4"/>
+ 
+              <path id="cap-curve" d="M230,160 C245,160 250,95 280,75 C320,58 350,55 385,55" fill="none" stroke="#7BE0C4" stroke-width="2.5"/>
+              <circle r="4" fill="#D98E4A">
+                <animateMotion dur="4s" repeatCount="indefinite">
+                  <mpath href="#cap-curve"/>
+                </animateMotion>
+              </circle>
+ 
+              <text x="222" y="38" text-anchor="end" fill="#8FAFA0" font-size="11" font-family="'IBM Plex Mono', monospace">V</text>
+              <text x="385" y="174" text-anchor="end" fill="#8FAFA0" font-size="11" font-family="'IBM Plex Mono', monospace">t</text>
+ 
+              <text x="307" y="22" text-anchor="middle" fill="#F1ECE0" font-size="12" font-family="'IBM Plex Mono', monospace" letter-spacing="1">C ≈ 220 nF</text>
+            </svg>
+          </div>
           <p class="project-domain">Instrumentation</p>
           <h3>Capacitance Meter</h3>
           <p>Microcontroller-based meter that measures unknown capacitor values by timing the RC charge curve and converting it to capacitance, displayed live on an LCD.</p>
@@ -123,7 +188,7 @@
             <a href="https://github.com/omarsherif547/capacitance-meter" class="project-link" target="_blank" rel="noopener">View source ↗</a>
           </div>
         </article>
-
+ 
         <article class="project-card">
           <p class="project-domain">Signal Processing</p>
           <h3>ECG Signal Denoising</h3>
@@ -139,10 +204,10 @@
             <a href="https://github.com/omarsherif547/ecg-signal-denoising" class="project-link" target="_blank" rel="noopener">View source ↗</a>
           </div>
         </article>
-
+ 
       </div>
     </section>
-
+ 
     <!-- SKILLS -->
     <section id="skills" class="skills reveal">
       <h2>Skills</h2>
@@ -178,7 +243,7 @@
         </div>
       </div>
     </section>
-
+ 
     <!-- CONTACT -->
     <section id="contact" class="contact reveal">
       <h2>Contact</h2>
@@ -189,13 +254,14 @@
         <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn ↗</a>
       </div>
     </section>
-
+ 
   </main>
-
+ 
   <footer class="footer">
     <p>© 2026 Omar Sherif · Built with HTML, CSS &amp; JS · Hosted on GitHub Pages</p>
   </footer>
-
+ 
   <script src="script.js"></script>
 </body>
 </html>
+ 
