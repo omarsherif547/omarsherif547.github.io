@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omar Sherif — Portfolio</title>
+  <meta name="description" content="Omar Sherif — Computer & Communications Engineering student. Embedded systems, control theory, signal processing, and full-stack development.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="#home" class="logo">OMAR<span>.</span>SHERIF</a>
+      <nav class="nav-links" aria-label="Section navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="nav-icon" href="https://github.com/omarsherif547" target="_blank" rel="noopener" aria-label="GitHub profile">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 0.5C5.65 0.5 0.5 5.65 0.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.74.4-1.25.72-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.05 11.05 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.27 5.7.41.36.77 1.07.77 2.15 0 1.55-.01 2.8-.01 3.18 0 .3.21.66.79.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">PORTFOLIO — BUILD 2026.06</p>
+        <h1>Omar Sherif</h1>
+        <p class="hero-sub">Computer &amp; Communications Engineering student building control systems, instrumentation, and full-stack software.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View projects</a>
+          <a href="https://github.com/omarsherif547" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="waveform" aria-hidden="true">
+        <svg viewBox="0 0 1000 240" preserveAspectRatio="none">
+          <path id="wavepath" class="wave-path"
+            d="M0,120 L24,150 L48,95 L72,135 L96,90 L120,145 L144,100 L168,130 L192,85 L216,140 L240,105 L264,150 L288,95 L312,125 L336,100 L360,145 L384,90 L408,130 L432,110 L456,140 L480,120 L540,120 C560,120 565,108 580,108 C595,108 600,120 605,120 L615,128 L630,20 L645,172 L660,120 C685,120 695,95 720,95 C745,95 750,120 760,120 L1000,120"/>
+          <circle class="wave-dot" r="5">
+            <animateMotion dur="6s" repeatCount="indefinite" rotate="auto">
+              <mpath href="#wavepath"/>
+            </animateMotion>
+          </circle>
+        </svg>
+        <div class="wave-labels">
+          <span>RAW SIGNAL</span>
+          <span>FILTERED OUTPUT</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about reveal">
+      <div class="about-text">
+        <h2>About</h2>
+        <p>I'm a Computer &amp; Communications Engineering student at Alexandria National University, focused on the layer where hardware meets software — control loops, signal pipelines, and the firmware that ties them together.</p>
+        <p>Outside coursework, I teach robotics at Mind-Tech Robotics, helping students build and debug their own electromechanical systems. I'm currently expanding from embedded C/C++ into full-stack development.</p>
+      </div>
+      <dl class="spec-sheet">
+        <div>
+          <dt>Location</dt>
+          <dd>Alexandria, Egypt</dd>
+        </div>
+        <div>
+          <dt>Education</dt>
+          <dd>B.Sc. Computer &amp; Communications Engineering, Alexandria National University — Class of 2028</dd>
+        </div>
+        <div>
+          <dt>Current role</dt>
+          <dd>Robotics Instructor, Mind-Tech Robotics</dd>
+        </div>
+        <div>
+          <dt>Focus areas</dt>
+          <dd>Embedded systems, control theory, signal processing, full-stack development</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects reveal">
+      <h2>Projects</h2>
+      <div class="project-grid">
+
+        <article class="project-card">
+          <p class="project-domain">Control Systems</p>
+          <h3>Line Follower Robot</h3>
+          <p>Autonomous robot that tracks a line using an IR sensor array, with a PID control loop driving the motors for smooth, stable tracking through curves.</p>
+          <ul class="tags">
+            <li>Arduino</li>
+            <li>C++</li>
+            <li>PID Control</li>
+            <li>IR Sensors</li>
+          </ul>
+          <div class="project-spec">
+            <p>Kp / Ki / Kd gains tuned experimentally to reduce oscillation and overshoot at higher speeds.</p>
+            <a href="https://github.com/omarsherif547/line-follower-pid" class="project-link" target="_blank" rel="noopener">View source ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <p class="project-domain">Instrumentation</p>
+          <h3>Capacitance Meter</h3>
+          <p>Microcontroller-based meter that measures unknown capacitor values by timing the RC charge curve and converting it to capacitance, displayed live on an LCD.</p>
+          <ul class="tags">
+            <li>Arduino</li>
+            <li>C++</li>
+            <li>Embedded C</li>
+            <li>Circuit Design</li>
+          </ul>
+          <div class="project-spec">
+            <p>Calibrated against known reference capacitors across multiple measurement ranges.</p>
+            <a href="https://github.com/omarsherif547/capacitance-meter" class="project-link" target="_blank" rel="noopener">View source ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <p class="project-domain">Signal Processing</p>
+          <h3>ECG Signal Denoising</h3>
+          <p>Denoising pipeline for ECG recordings from the MIT-BIH Arrhythmia Database, comparing FIR, Butterworth, and Chebyshev filter designs against noise-rejection specs.</p>
+          <ul class="tags">
+            <li>MATLAB</li>
+            <li>DSP</li>
+            <li>WFDB Toolbox</li>
+            <li>Filter Design</li>
+          </ul>
+          <div class="project-spec">
+            <p>Iteratively verified filter performance and spec compliance using the WFDB toolbox.</p>
+            <a href="https://github.com/omarsherif547/ecg-signal-denoising" class="project-link" target="_blank" rel="noopener">View source ↗</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills reveal">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Languages</h3>
+          <ul>
+            <li>C</li>
+            <li>C++</li>
+            <li>Python</li>
+            <li>Java</li>
+            <li>JavaScript</li>
+            <li>SQL</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Embedded &amp; Hardware</h3>
+          <ul>
+            <li>Arduino IDE</li>
+            <li>Assembly (x86, SIC/XE)</li>
+            <li>Circuit Design</li>
+            <li>PID Control</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Web &amp; Tools</h3>
+          <ul>
+            <li>HTML / CSS</li>
+            <li>Git &amp; GitHub</li>
+            <li>MATLAB</li>
+            <li>Signal Processing</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact reveal">
+      <h2>Contact</h2>
+      <p>Open to full-stack development internships and embedded systems collaborations. Reach out below.</p>
+      <div class="contact-links">
+        <a href="mailto:your-email@example.com">Email ↗</a>
+        <a href="https://github.com/omarsherif547" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Omar Sherif · Built with HTML, CSS &amp; JS · Hosted on GitHub Pages</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
