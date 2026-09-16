@@ -8,7 +8,32 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=20260916-2" />
+
+  <style>
+    /* Critical mobile fixes: keep project screenshots visible on phones */
+    .project-gallery{width:100%;overflow:visible!important;min-height:auto!important;}
+    .project-shot{min-height:auto!important;height:auto!important;}
+    .project-shot img{display:block!important;width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;object-fit:contain!important;visibility:visible!important;opacity:1!important;background:#fff;}
+    .main-shot{flex:none!important;min-height:auto!important;}
+    .main-shot img{min-height:0!important;}
+    .project-shot-row .project-shot{min-height:auto!important;}
+    .project-shot-row img{min-height:0!important;max-height:none!important;}
+    @media(max-width:900px){
+      .project.featured{display:flex!important;flex-direction:column!important;min-height:auto!important;}
+      .project-gallery{border-right:0!important;border-bottom:1px solid var(--line)!important;padding:14px!important;gap:12px!important;}
+      .project-shot-row{display:grid!important;grid-template-columns:1fr 1fr!important;gap:12px!important;}
+    }
+    @media(max-width:700px){
+      .project-grid{display:flex!important;flex-direction:column!important;}
+      .project.featured{grid-column:auto!important;width:100%!important;}
+      .project-gallery{display:flex!important;flex-direction:column!important;width:100%!important;}
+      .project-shot-row{display:flex!important;flex-direction:column!important;width:100%!important;}
+      .project-shot,.main-shot,.project-shot-row .project-shot{width:100%!important;min-height:auto!important;height:auto!important;}
+      .project-shot img,.main-shot img,.project-shot-row img{width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;display:block!important;}
+      .project-shot figcaption{font-size:9px!important;padding:7px 9px!important;}
+    }
+  </style>
 </head>
 <body>
   <div class="noise"></div>
@@ -84,16 +109,16 @@
           <article class="project featured">
             <div class="project-gallery" aria-label="Cisco Packet Tracer project screenshots">
               <figure class="project-shot main-shot">
-                <img src="assets/projects/network-topology.png" alt="Three-building Cisco Packet Tracer enterprise network topology" loading="lazy">
+                <img src="assets/projects/network-topology.png?v=20260916-2" alt="Three-building Cisco Packet Tracer enterprise network topology" loading="eager" decoding="async">
                 <figcaption>Enterprise topology</figcaption>
               </figure>
               <div class="project-shot-row">
                 <figure class="project-shot">
-                  <img src="assets/projects/ospf-routing-table.png" alt="Cisco router routing table showing OSPF learned routes" loading="lazy">
+                  <img src="assets/projects/ospf-routing-table.png?v=20260916-2" alt="Cisco router routing table showing OSPF learned routes" loading="eager" decoding="async">
                   <figcaption>OSPF routing verification</figcaption>
                 </figure>
                 <figure class="project-shot">
-                  <img src="assets/projects/vlan-configuration.png" alt="Cisco show vlan brief output with VLANs 10, 20, and 30" loading="lazy">
+                  <img src="assets/projects/vlan-configuration.png?v=20260916-2" alt="Cisco show vlan brief output with VLANs 10, 20, and 30" loading="eager" decoding="async">
                   <figcaption>VLAN verification</figcaption>
                 </figure>
               </div>
@@ -135,10 +160,57 @@
       </div>
     </section>
 
-    <section class="cta container" id="contact"><div class="cta-inner"><span class="eyebrow">06 / Contact</span><h2>Let's build something<br><em>connected.</em></h2><p>I'm open to networking internships, junior opportunities, technical collaborations, and projects where I can keep growing.</p><div class="contact-actions"><a class="btn primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=omaromarabdelbaki@gmail.com" target="_blank" rel="noopener noreferrer">Email me ↗</a><a class="btn ghost" href="https://www.linkedin.com/in/omar-abdelbakyy-egy" target="_blank" rel="noreferrer">LinkedIn ↗</a><a class="btn ghost" href="https://github.com/omarsherif547" target="_blank" rel="noreferrer">GitHub ↗</a></div></div></section>
+    <section class="cta container" id="contact"><div class="cta-inner"><span class="eyebrow">06 / Contact</span><h2>Let's build something<br><em>connected.</em></h2><p>I'm open to networking internships, junior opportunities, technical collaborations, and projects where I can keep growing.</p><div class="contact-actions"><a class="btn primary" id="emailLink" href="mailto:omaromarabdelbaki@gmail.com?subject=Portfolio%20Contact">Email me ↗</a><a class="btn ghost" href="https://www.linkedin.com/in/omar-abdelbakyy-egy" target="_blank" rel="noreferrer">LinkedIn ↗</a><a class="btn ghost" href="https://github.com/omarsherif547" target="_blank" rel="noreferrer">GitHub ↗</a></div></div></section>
   </main>
 
   <footer class="footer container"><span>© 2026 Omar Sherif Mahmoud</span><span>Designed for networking.</span><a href="#top">Back to top ↑</a></footer>
-  <script src="script.js"></script>
+
+  <script>
+    if (window.location.search) {
+      window.history.replaceState(null, '', window.location.pathname + window.location.hash);
+    }
+
+    const emailLink = document.getElementById('emailLink');
+    if (emailLink) {
+      emailLink.href = 'mailto:omaromarabdelbaki@gmail.com?subject=Portfolio%20Contact';
+      emailLink.removeAttribute('target');
+    }
+
+    document.querySelectorAll('.project-gallery img').forEach((img) => {
+      img.loading = 'eager';
+      img.decoding = 'async';
+      img.style.display = 'block';
+      img.style.width = '100%';
+      img.style.height = 'auto';
+      img.style.visibility = 'visible';
+      img.style.opacity = '1';
+    });
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav-links');
+    menuToggle?.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', open);
+    });
+    document.querySelectorAll('.nav-links a').forEach((a) => {
+      a.addEventListener('click', () => nav.classList.remove('open'));
+    });
+    const reveal = document.querySelectorAll('.section,.project,.cert,.timeline-item');
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      }), { threshold: 0.08 });
+      reveal.forEach((el) => {
+        el.classList.add('reveal');
+        io.observe(el);
+      });
+    } else {
+      reveal.forEach((el) => el.classList.add('visible'));
+    }
+  </script>
+
 </body>
 </html>
