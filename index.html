@@ -1,267 +1,144 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Omar Sherif — Portfolio</title>
-  <meta name="description" content="Omar Sherif — Computer & Communications Engineering student. Embedded systems, control theory, signal processing, and full-stack development.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Omar Sherif Mahmoud — Computer & Communication Engineering student at Alexandria National University and aspiring Network Engineer with hands-on Cisco networking experience." />
+  <title>Omar Sherif Mahmoud | Network Engineer Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
- 
-  <header class="nav">
-    <div class="nav-inner">
-      <a href="#home" class="logo">OMAR<span>.</span>SHERIF</a>
-      <nav class="nav-links" aria-label="Section navigation">
+  <div class="noise"></div>
+  <header class="site-header" id="top">
+    <nav class="nav container">
+      <a class="brand" href="#home" aria-label="Omar Sherif Mahmoud home"><span>O</span> Omar<span class="dot">.</span></a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <div class="nav-links">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a class="nav-icon" href="https://github.com/omarsherif547" target="_blank" rel="noopener" aria-label="GitHub profile">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M12 0.5C5.65 0.5 0.5 5.65 0.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.74.4-1.25.72-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.05 11.05 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.27 5.7.41.36.77 1.07.77 2.15 0 1.55-.01 2.8-.01 3.18 0 .3.21.66.79.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
-        </svg>
-      </a>
-    </div>
+        <a href="#experience">Experience</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact" class="nav-cta">Let's connect ↗</a>
+      </div>
+    </nav>
   </header>
- 
+
   <main>
- 
-    <!-- HERO -->
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <p class="eyebrow">PORTFOLIO — BUILD 2026.06</p>
-        <h1>Omar Sherif</h1>
-        <p class="hero-sub">Computer &amp; Communications Engineering student building control systems, instrumentation, and full-stack software.</p>
+    <section class="hero container" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot"></span> Open to networking opportunities</div>
+        <h1>Building networks.<br><em>Connecting possibilities.</em></h1>
+        <p class="hero-text">I'm Omar Sherif Mahmoud, a Computer &amp; Communication Engineering student at Alexandria National University, building my career in Network Engineering. Through Cisco networking training and hands-on Packet Tracer projects, I develop practical skills in routing, switching, subnetting, network services, redundancy, security, and troubleshooting.</p>
         <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">View projects</a>
-          <a href="https://github.com/omarsherif547" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
+          <a class="btn primary" href="#projects">Explore my work <span>↗</span></a>
+          <a class="btn ghost" href="assets/Omar-Sherif-Mahmoud-CV.pdf" download>Download CV ↓</a>
+        </div>
+        <div class="hero-meta">
+          <div><strong>Alexandria</strong><span>Egypt</span></div>
+          <div><strong>Alexandria National University</strong><span>Computer &amp; Communication Engineering</span></div>
+          <div><strong>Focus</strong><span>Networking / Infrastructure</span></div>
         </div>
       </div>
- 
-      <div class="waveform" aria-hidden="true">
-        <svg viewBox="0 0 1000 240" preserveAspectRatio="none">
-          <path id="wavepath" class="wave-path"
-            d="M0,120 L24,150 L48,95 L72,135 L96,90 L120,145 L144,100 L168,130 L192,85 L216,140 L240,105 L264,150 L288,95 L312,125 L336,100 L360,145 L384,90 L408,130 L432,110 L456,140 L480,120 L540,120 C560,120 565,108 580,108 C595,108 600,120 605,120 L615,128 L630,20 L645,172 L660,120 C685,120 695,95 720,95 C745,95 750,120 760,120 L1000,120"/>
-          <circle class="wave-dot" r="5">
-            <animateMotion dur="6s" repeatCount="indefinite" rotate="auto">
-              <mpath href="#wavepath"/>
-            </animateMotion>
-          </circle>
+      <div class="network-art" aria-label="Abstract network visualization">
+        <div class="orb orb-a"></div><div class="orb orb-b"></div><div class="orb orb-c"></div>
+        <svg viewBox="0 0 600 560" role="img" aria-hidden="true">
+          <defs>
+            <linearGradient id="line" x1="0" x2="1"><stop offset="0"/><stop offset="1"/></linearGradient>
+            <filter id="glow"><feGaussianBlur stdDeviation="5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+          <g class="connections">
+            <path d="M110 120 L280 80 L460 145 L370 290 L520 410 L300 470 L120 390 L110 120"/>
+            <path d="M280 80 L300 470"/><path d="M460 145 L120 390"/><path d="M110 120 L370 290 L520 410"/>
+          </g>
+          <g class="nodes" filter="url(#glow)">
+            <circle cx="110" cy="120" r="13"/><circle cx="280" cy="80" r="16"/><circle cx="460" cy="145" r="12"/><circle cx="370" cy="290" r="23"/><circle cx="520" cy="410" r="14"/><circle cx="300" cy="470" r="17"/><circle cx="120" cy="390" r="12"/>
+          </g>
+          <g class="node-labels"><text x="348" y="278">CORE</text><text x="264" y="58">R1</text><text x="475" y="135">SW1</text><text x="514" y="435">HOST</text></g>
         </svg>
-        <div class="wave-labels">
-          <span>RAW SIGNAL</span>
-          <span>FILTERED OUTPUT</span>
+        <div class="terminal-card"><span>●</span><span>network.lab</span><b>online</b></div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Areas of expertise"><div class="ticker-track"><span>CISCO NETWORKING</span><i>✦</i><span>ROUTING & SWITCHING</span><i>✦</i><span>NETWORK INFRASTRUCTURE</span><i>✦</i><span>LINUX</span><i>✦</i><span>PYTHON</span><i>✦</i><span>PACKET TRACER</span><i>✦</i><span>CISCO NETWORKING</span><i>✦</i><span>ROUTING & SWITCHING</span><i>✦</i></div></section>
+
+    <section class="section container" id="about">
+      <div class="section-heading"><span>01 / About</span><h2>Engineer mindset.<br><em>Hands-on approach.</em></h2></div>
+      <div class="about-grid">
+        <div class="about-lead"><p class="big-copy">I’m an aspiring <strong>Network Engineer</strong> focused on building reliable, well-structured infrastructure and understanding how traffic flows, how failures happen, and how networks stay available.</p><p>I study Computer &amp; Communication Engineering at Alexandria National University while strengthening my practical networking skills through Cisco training and project-based labs. I enjoy turning requirements into working topologies — planning IP addressing, segmenting networks with VLANs, configuring routing and redundancy, validating services, and troubleshooting connectivity methodically.</p></div>
+        <div class="about-facts">
+          <div class="fact"><span>01</span><h3>Learn by building</h3><p>Cisco Packet Tracer projects help me practice real configuration, verification, and troubleshooting workflows.</p></div>
+          <div class="fact"><span>02</span><h3>Think in systems</h3><p>I connect addressing, segmentation, routing, redundancy, services, and security into one complete network design.</p></div>
+          <div class="fact"><span>03</span><h3>Communicate clearly</h3><p>Leadership and competition experience strengthened my documentation, coordination, ownership, and teamwork — skills that matter in NOC and Network Engineering environments.</p></div>
         </div>
       </div>
     </section>
- 
-    <!-- ABOUT -->
-    <section id="about" class="about reveal">
-      <div class="about-text">
-        <h2>About</h2>
-        <p>I'm a Computer &amp; Communications Engineering student at Alexandria National University, focused on the layer where hardware meets software — control loops, signal pipelines, and the firmware that ties them together.</p>
-        <p>Outside coursework, I teach robotics at Mind-Tech Robotics, helping students build and debug their own electromechanical systems. I'm currently expanding from embedded C/C++ into full-stack development.</p>
-      </div>
-      <dl class="spec-sheet">
-        <div>
-          <dt>Location</dt>
-          <dd>Alexandria, Egypt</dd>
-        </div>
-        <div>
-          <dt>Education</dt>
-          <dd>B.Sc. Computer &amp; Communications Engineering, Alexandria National University — Class of 2028</dd>
-        </div>
-        <div>
-          <dt>Current role</dt>
-          <dd>Robotics Instructor, Mind-Tech Robotics</dd>
-        </div>
-        <div>
-          <dt>Focus areas</dt>
-          <dd>Embedded systems, control theory, signal processing, full-stack development</dd>
-        </div>
-      </dl>
-    </section>
- 
-    <!-- PROJECTS -->
-    <section id="projects" class="projects reveal">
-      <h2>Projects</h2>
-      <div class="project-grid">
- 
-        <article class="project-card">
-          <div class="project-illustration" aria-hidden="true">
-            <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-              <path id="lf-track" d="M20,160 C100,160 100,40 200,40 C300,40 300,160 380,160" fill="none" stroke="#2A5C49" stroke-width="10" stroke-linecap="round"/>
-              <g>
-                <rect x="-22" y="-12" width="44" height="24" rx="5" fill="#15392C" stroke="#D98E4A" stroke-width="2"/>
-                <circle cx="-13" cy="13" r="5" fill="#1C4536" stroke="#2A5C49"/>
-                <circle cx="13" cy="13" r="5" fill="#1C4536" stroke="#2A5C49"/>
-                <circle cx="-12" cy="-14" r="2.5" fill="#8FAFA0">
-                  <animate attributeName="fill" values="#8FAFA0;#7BE0C4;#8FAFA0" dur="2s" begin="0s" repeatCount="indefinite"/>
-                </circle>
-                <circle cx="-6" cy="-14" r="2.5" fill="#8FAFA0">
-                  <animate attributeName="fill" values="#8FAFA0;#7BE0C4;#8FAFA0" dur="2s" begin="0.2s" repeatCount="indefinite"/>
-                </circle>
-                <circle cx="0" cy="-14" r="2.5" fill="#8FAFA0">
-                  <animate attributeName="fill" values="#8FAFA0;#7BE0C4;#8FAFA0" dur="2s" begin="0.4s" repeatCount="indefinite"/>
-                </circle>
-                <circle cx="6" cy="-14" r="2.5" fill="#8FAFA0">
-                  <animate attributeName="fill" values="#8FAFA0;#7BE0C4;#8FAFA0" dur="2s" begin="0.6s" repeatCount="indefinite"/>
-                </circle>
-                <circle cx="12" cy="-14" r="2.5" fill="#8FAFA0">
-                  <animate attributeName="fill" values="#8FAFA0;#7BE0C4;#8FAFA0" dur="2s" begin="0.8s" repeatCount="indefinite"/>
-                </circle>
-                <animateMotion dur="8s" repeatCount="indefinite" rotate="auto">
-                  <mpath href="#lf-track"/>
-                </animateMotion>
-              </g>
-              <text x="372" y="190" text-anchor="end" fill="#8FAFA0" font-size="11" font-family="'IBM Plex Mono', monospace" letter-spacing="2">PID LOOP</text>
-            </svg>
-          </div>
-          <p class="project-domain">Control Systems</p>
-          <h3>Line Follower Robot</h3>
-          <p>Autonomous robot that tracks a line using an IR sensor array, with a PID control loop driving the motors for smooth, stable tracking through curves.</p>
-          <ul class="tags">
-            <li>Arduino</li>
-            <li>C++</li>
-            <li>PID Control</li>
-            <li>IR Sensors</li>
-          </ul>
-          <div class="project-spec">
-            <p>Kp / Ki / Kd gains tuned experimentally to reduce oscillation and overshoot at higher speeds.</p>
-            <a href="https://github.com/omarsherif547/line-follower-pid" class="project-link" target="_blank" rel="noopener">View source ↗</a>
-          </div>
-        </article>
- 
-        <article class="project-card">
-          <div class="project-illustration" aria-hidden="true">
-            <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-              <rect x="20" y="60" width="60" height="50" rx="4" fill="#15392C" stroke="#2A5C49" stroke-width="1.5"/>
-              <text x="50" y="89" text-anchor="middle" fill="#F1ECE0" font-size="13" font-family="'IBM Plex Mono', monospace" letter-spacing="1">MCU</text>
- 
-              <line x1="80" y1="75" x2="130" y2="75" stroke="#2A5C49" stroke-width="2"/>
-              <path d="M130,75 l6,-10 l8,20 l8,-20 l8,20 l6,-10" fill="none" stroke="#D98E4A" stroke-width="2" stroke-linejoin="round"/>
-              <text x="148" y="58" text-anchor="middle" fill="#D98E4A" font-size="12" font-family="'IBM Plex Mono', monospace">R</text>
- 
-              <line x1="176" y1="75" x2="176" y2="108" stroke="#2A5C49" stroke-width="2"/>
-              <line x1="160" y1="108" x2="192" y2="108" stroke="#7BE0C4" stroke-width="3"/>
-              <line x1="160" y1="118" x2="192" y2="118" stroke="#7BE0C4" stroke-width="3"/>
-              <text x="200" y="117" fill="#7BE0C4" font-size="12" font-family="'IBM Plex Mono', monospace">C</text>
-              <line x1="176" y1="118" x2="176" y2="150" stroke="#2A5C49" stroke-width="2"/>
- 
-              <line x1="164" y1="150" x2="188" y2="150" stroke="#2A5C49" stroke-width="2"/>
-              <line x1="168" y1="156" x2="184" y2="156" stroke="#2A5C49" stroke-width="2"/>
-              <line x1="172" y1="162" x2="180" y2="162" stroke="#2A5C49" stroke-width="2"/>
- 
-              <line x1="230" y1="30" x2="230" y2="160" stroke="#2A5C49" stroke-width="1.5"/>
-              <line x1="230" y1="160" x2="385" y2="160" stroke="#2A5C49" stroke-width="1.5"/>
-              <line x1="230" y1="55" x2="385" y2="55" stroke="#2A5C49" stroke-width="1.5" stroke-dasharray="4 4"/>
- 
-              <path id="cap-curve" d="M230,160 C245,160 250,95 280,75 C320,58 350,55 385,55" fill="none" stroke="#7BE0C4" stroke-width="2.5"/>
-              <circle r="4" fill="#D98E4A">
-                <animateMotion dur="4s" repeatCount="indefinite">
-                  <mpath href="#cap-curve"/>
-                </animateMotion>
-              </circle>
- 
-              <text x="222" y="38" text-anchor="end" fill="#8FAFA0" font-size="11" font-family="'IBM Plex Mono', monospace">V</text>
-              <text x="385" y="174" text-anchor="end" fill="#8FAFA0" font-size="11" font-family="'IBM Plex Mono', monospace">t</text>
- 
-              <text x="307" y="22" text-anchor="middle" fill="#F1ECE0" font-size="12" font-family="'IBM Plex Mono', monospace" letter-spacing="1">C ≈ 220 nF</text>
-            </svg>
-          </div>
-          <p class="project-domain">Instrumentation</p>
-          <h3>Capacitance Meter</h3>
-          <p>Microcontroller-based meter that measures unknown capacitor values by timing the RC charge curve and converting it to capacitance, displayed live on an LCD.</p>
-          <ul class="tags">
-            <li>Arduino</li>
-            <li>C++</li>
-            <li>Embedded C</li>
-            <li>Circuit Design</li>
-          </ul>
-          <div class="project-spec">
-            <p>Calibrated against known reference capacitors across multiple measurement ranges.</p>
-            <a href="https://github.com/omarsherif547/capacitance-meter" class="project-link" target="_blank" rel="noopener">View source ↗</a>
-          </div>
-        </article>
- 
-        <article class="project-card">
-          <p class="project-domain">Signal Processing</p>
-          <h3>ECG Signal Denoising</h3>
-          <p>Denoising pipeline for ECG recordings from the MIT-BIH Arrhythmia Database, comparing FIR, Butterworth, and Chebyshev filter designs against noise-rejection specs.</p>
-          <ul class="tags">
-            <li>MATLAB</li>
-            <li>DSP</li>
-            <li>WFDB Toolbox</li>
-            <li>Filter Design</li>
-          </ul>
-          <div class="project-spec">
-            <p>Iteratively verified filter performance and spec compliance using the WFDB toolbox.</p>
-            <a href="https://github.com/omarsherif547/ecg-signal-denoising" class="project-link" target="_blank" rel="noopener">View source ↗</a>
-          </div>
-        </article>
- 
-      </div>
-    </section>
- 
-    <!-- SKILLS -->
-    <section id="skills" class="skills reveal">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-group">
-          <h3>Languages</h3>
-          <ul>
-            <li>C</li>
-            <li>C++</li>
-            <li>Python</li>
-            <li>Java</li>
-            <li>JavaScript</li>
-            <li>SQL</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <h3>Embedded &amp; Hardware</h3>
-          <ul>
-            <li>Arduino IDE</li>
-            <li>Assembly (x86, SIC/XE)</li>
-            <li>Circuit Design</li>
-            <li>PID Control</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <h3>Web &amp; Tools</h3>
-          <ul>
-            <li>HTML / CSS</li>
-            <li>Git &amp; GitHub</li>
-            <li>MATLAB</li>
-            <li>Signal Processing</li>
-          </ul>
+
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-heading split"><div><span>02 / Selected work</span><h2>Projects that show<br><em>how I think.</em></h2></div><p>My portfolio is intentionally project-led. Certificates show what I studied; projects show what I can do.</p></div>
+        <div class="project-grid">
+          <article class="project featured">
+            <div class="project-gallery" aria-label="Cisco Packet Tracer project screenshots">
+              <figure class="project-shot main-shot">
+                <img src="assets/projects/network-topology.png" alt="Three-building Cisco Packet Tracer enterprise network topology" loading="lazy">
+                <figcaption>Enterprise topology</figcaption>
+              </figure>
+              <div class="project-shot-row">
+                <figure class="project-shot">
+                  <img src="assets/projects/ospf-routing-table.png" alt="Cisco router routing table showing OSPF learned routes" loading="lazy">
+                  <figcaption>OSPF routing verification</figcaption>
+                </figure>
+                <figure class="project-shot">
+                  <img src="assets/projects/vlan-configuration.png" alt="Cisco show vlan brief output with VLANs 10, 20, and 30" loading="lazy">
+                  <figcaption>VLAN verification</figcaption>
+                </figure>
+              </div>
+            </div>
+            <div class="project-body"><div class="project-num">01</div><h3>Enterprise Network Design &amp; Configuration</h3><p>Designed a three-building Cisco Packet Tracer network using VLSM, VLAN segmentation, multilayer switching, OSPF dynamic routing, HSRP redundancy, DHCP, network services, ACLs, and port security.</p><div class="tags"><span>Cisco Packet Tracer</span><span>OSPF</span><span>VLANs</span><span>HSRP</span><span>VLSM</span><span>ACLs</span></div><div class="project-footer"><span>Networking Lab</span><a href="https://github.com/omarsherif547/Enterprise-Network-Cisco-Packet-Tracer" target="_blank" rel="noreferrer">GitHub ↗</a></div></div>
+          </article>
+          <article class="project"><div class="project-visual code-visual"><div class="code-lines"><span>01</span><b>ip route</b><span>192.168.20.0/24</span><b>via</b><span>10.0.0.2</span><br><span>02</span><b>show vlan</b><span>brief</span><br><span>03</span><b>show etherchannel</b></div></div><div class="project-body"><div class="project-num">02</div><h3>CCNA Network Labs</h3><p>A growing collection of focused labs for switching, routing, addressing, device access, and troubleshooting.</p><div class="tags"><span>CCNA</span><span>IPv4</span><span>Switching</span></div><div class="project-footer"><span>Ongoing</span></div></div></article>
+          <article class="project"><div class="project-visual robot-visual"><div class="robot-grid"></div><div class="robot-icon">⌁</div><div class="speed">23.3s</div></div><div class="project-body"><div class="project-num">03</div><h3>Line Follower Robot</h3><p>Competition robot using Arduino Nano, QTR 8-channel sensor, N30 motors and TB6612 driver — achieving a 23.3s recorded run.</p><div class="tags"><span>Arduino</span><span>Embedded</span><span>Robotics</span></div><div class="project-footer"><span>Minoan Robosport</span><span>1st place</span></div></div></article>
         </div>
       </div>
     </section>
- 
-    <!-- CONTACT -->
-    <section id="contact" class="contact reveal">
-      <h2>Contact</h2>
-      <p>Open to full-stack development internships and embedded systems collaborations. Reach out below.</p>
-      <div class="contact-links">
-        <a href="mailto:omaromarabdelbaki@gmail.com">Email ↗</a>
-        <a href="https://github.com/omarsherif547" target="_blank" rel="noopener">GitHub ↗</a>
-        <a href="https://www.linkedin.com/in/omar-abdelbakyy-egy" target="_blank" rel="noopener">LinkedIn ↗</a>
+
+    <section class="section container" id="skills">
+      <div class="section-heading"><span>03 / Toolkit</span><h2>Technical <em>stack.</em></h2></div>
+      <div class="skills-layout">
+        <div class="skill-feature"><span class="skill-icon">⌁</span><h3>Networking</h3><p>My primary career focus.</p><div class="skill-list"><span>TCP/IP</span><span>IPv4 / IPv6</span><span>Subnetting / VLSM</span><span>VLANs</span><span>Routing & Switching</span><span>DHCP / DNS</span><span>EtherChannel</span><span>Telnet / SSH</span></div></div>
+        <div class="skill-column"><div><span class="skill-index">02</span><h3>Infrastructure</h3><p>Cisco Packet Tracer · Linux · Network troubleshooting · Basic system administration</p></div><div><span class="skill-index">03</span><h3>Programming</h3><p>Python · MATLAB · C / embedded development · Java</p></div><div><span class="skill-index">04</span><h3>Tools</h3><p>Git / GitHub · EasyEDA · Arduino · Microsoft Office</p></div></div>
       </div>
     </section>
- 
+
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-heading"><span>04 / Experience</span><h2>More than <em>technical skills.</em></h2></div>
+        <div class="timeline">
+          <div class="timeline-item"><div class="time">2026</div><div class="time-main"><h3>Network Infrastructure Training</h3><p class="company">National Telecommunication Institute (NTI)</p><p>Hands-on networking training through the Cisco Networking Academy ecosystem, building practical foundations for a Network Engineer career.</p></div></div>
+          <div class="timeline-item"><div class="time">2023–Present</div><div class="time-main"><h3>Public Relations Director</h3><p class="company">Mind-Tech Robotics · Alexandria National University</p><p>Led external communication, partnerships, sponsorship initiatives, and competition-related coordination for a university robotics team.</p></div></div>
+          <div class="timeline-item"><div class="time">2023–Present</div><div class="time-main"><h3>Technical & Competition Experience</h3><p class="company">MATE ROV · Minoan Robosport · IRC · ROBOTEX</p><p>Worked across robotics competitions and technical projects, combining engineering execution with teamwork and event coordination.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="certifications">
+      <div class="section-heading split"><div><span>05 / Credentials</span><h2>Learning with <em>direction.</em></h2></div><p>Selected certifications and training supporting my networking and engineering path.</p></div>
+      <div class="cert-grid">
+        <div class="cert"><span class="cert-type">CISCO</span><h3>Networking Academy</h3><p>Semesters 1–3 certificates</p><small>Networking foundation</small></div>
+        <div class="cert"><span class="cert-type">NTI</span><h3>Network Infrastructure</h3><p>Summer internship / training</p><small>Infrastructure track</small></div>
+        <div class="cert"><span class="cert-type">RED HAT</span><h3>Linux Fundamentals</h3><p>Linux fundamentals training</p><small>Systems foundation</small></div>
+        <div class="cert"><span class="cert-type">NVIDIA</span><h3>Introduction to Networking</h3><p>Networking fundamentals</p><small>Technical learning</small></div>
+      </div>
+    </section>
+
+    <section class="cta container" id="contact"><div class="cta-inner"><span class="eyebrow">06 / Contact</span><h2>Let's build something<br><em>connected.</em></h2><p>I'm open to networking internships, junior opportunities, technical collaborations, and projects where I can keep growing.</p><div class="contact-actions"><a class="btn primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=omaromarabdelbaki@gmail.com" target="_blank" rel="noopener noreferrer">Email me ↗</a><a class="btn ghost" href="https://www.linkedin.com/in/omar-abdelbakyy-egy" target="_blank" rel="noreferrer">LinkedIn ↗</a><a class="btn ghost" href="https://github.com/omarsherif547" target="_blank" rel="noreferrer">GitHub ↗</a></div></div></section>
   </main>
- 
-  <footer class="footer">
-    <p>© 2026 Omar Sherif · Built with HTML, CSS &amp; JS · Hosted on GitHub Pages</p>
-  </footer>
- 
+
+  <footer class="footer container"><span>© 2026 Omar Sherif Mahmoud</span><span>Designed for networking.</span><a href="#top">Back to top ↑</a></footer>
   <script src="script.js"></script>
 </body>
 </html>
- 
