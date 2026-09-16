@@ -8,40 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260916-bgfix" />
-
-  <style>
-    /* Critical mobile fixes: keep project screenshots visible on phones */
-    .project-gallery{width:100%;overflow:visible!important;min-height:auto!important;}
-    .project-shot{min-height:auto!important;height:auto!important;}
-    .project-shot img{display:block!important;width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;object-fit:contain!important;visibility:visible!important;opacity:1!important;background:#fff;}
-    .main-shot{flex:none!important;min-height:auto!important;}
-    .main-shot img{min-height:0!important;}
-    .project-shot-row .project-shot{min-height:auto!important;}
-    .project-shot-row img{min-height:0!important;max-height:none!important;}
-    @media(max-width:900px){
-      .project.featured{display:flex!important;flex-direction:column!important;min-height:auto!important;}
-      .project-gallery{border-right:0!important;border-bottom:1px solid var(--line)!important;padding:14px!important;gap:12px!important;}
-      .project-shot-row{display:grid!important;grid-template-columns:1fr 1fr!important;gap:12px!important;}
-    }
-    @media(max-width:700px){
-      .project-grid{display:flex!important;flex-direction:column!important;}
-      .project.featured{grid-column:auto!important;width:100%!important;}
-      .project-gallery{display:flex!important;flex-direction:column!important;width:100%!important;}
-      .project-shot-row{display:flex!important;flex-direction:column!important;width:100%!important;}
-      .project-shot,.main-shot,.project-shot-row .project-shot{width:100%!important;min-height:auto!important;height:auto!important;}
-      .project-shot img,.main-shot img,.project-shot-row img{width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;display:block!important;}
-      .project-shot figcaption{font-size:9px!important;padding:7px 9px!important;}
-    }
-
-    /* Final mobile image fix: display screenshots as background cards with fixed height */
-    .mobile-safe-gallery{display:flex!important;flex-direction:column!important;gap:14px!important;width:100%!important;padding:16px!important;overflow:visible!important;border-right:1px solid var(--line);background:linear-gradient(135deg,#08120f,#10231e)}
-    .mobile-safe-shot{display:block!important;width:100%!important;min-height:300px!important;background-color:#fff!important;background-repeat:no-repeat!important;background-position:center!important;background-size:contain!important;border:1px solid var(--line)!important;text-decoration:none!important;position:relative!important;overflow:hidden!important}
-    .mobile-safe-shot.ospf-shot{min-height:420px!important}
-    .mobile-safe-shot span{position:absolute;left:0;right:0;bottom:0;padding:8px 10px;color:var(--muted);font:600 10px/1.2 Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;background:var(--bg);border-top:1px solid var(--line)}
-    @media(max-width:900px){.mobile-safe-gallery{border-right:0!important;border-bottom:1px solid var(--line)!important}.mobile-safe-shot{min-height:220px!important}.mobile-safe-shot.ospf-shot{min-height:360px!important}}
-    @media(max-width:700px){.mobile-safe-gallery{padding:10px!important;gap:12px!important}.mobile-safe-shot{min-height:170px!important}.mobile-safe-shot.ospf-shot{min-height:300px!important}.mobile-safe-shot span{font-size:9px!important;padding:7px 9px!important}}
-  </style>
+  <link rel="stylesheet" href="styles.css?v=20260917-nophotos" />
 </head>
 <body>
   <div class="noise"></div>
@@ -80,7 +47,6 @@
         <div class="orb orb-a"></div><div class="orb orb-b"></div><div class="orb orb-c"></div>
         <svg viewBox="0 0 600 560" role="img" aria-hidden="true">
           <defs>
-            <linearGradient id="line" x1="0" x2="1"><stop offset="0"/><stop offset="1"/></linearGradient>
             <filter id="glow"><feGaussianBlur stdDeviation="5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
           </defs>
           <g class="connections">
@@ -96,12 +62,17 @@
       </div>
     </section>
 
-    <section class="ticker" aria-label="Areas of expertise"><div class="ticker-track"><span>CISCO NETWORKING</span><i>✦</i><span>ROUTING & SWITCHING</span><i>✦</i><span>NETWORK INFRASTRUCTURE</span><i>✦</i><span>LINUX</span><i>✦</i><span>PYTHON</span><i>✦</i><span>PACKET TRACER</span><i>✦</i><span>CISCO NETWORKING</span><i>✦</i><span>ROUTING & SWITCHING</span><i>✦</i></div></section>
+    <section class="ticker" aria-label="Areas of expertise">
+      <div class="ticker-track"><span>CISCO NETWORKING</span><i>✦</i><span>ROUTING & SWITCHING</span><i>✦</i><span>NETWORK INFRASTRUCTURE</span><i>✦</i><span>LINUX</span><i>✦</i><span>PYTHON</span><i>✦</i><span>PACKET TRACER</span><i>✦</i><span>CISCO NETWORKING</span><i>✦</i><span>ROUTING & SWITCHING</span><i>✦</i></div>
+    </section>
 
     <section class="section container" id="about">
       <div class="section-heading"><span>01 / About</span><h2>Engineer mindset.<br><em>Hands-on approach.</em></h2></div>
       <div class="about-grid">
-        <div class="about-lead"><p class="big-copy">I’m an aspiring <strong>Network Engineer</strong> focused on building reliable, well-structured infrastructure and understanding how traffic flows, how failures happen, and how networks stay available.</p><p>I study Computer &amp; Communication Engineering at Alexandria National University while strengthening my practical networking skills through Cisco training and project-based labs. I enjoy turning requirements into working topologies — planning IP addressing, segmenting networks with VLANs, configuring routing and redundancy, validating services, and troubleshooting connectivity methodically.</p></div>
+        <div class="about-lead">
+          <p class="big-copy">I’m an aspiring <strong>Network Engineer</strong> focused on building reliable, well-structured infrastructure and understanding how traffic flows, how failures happen, and how networks stay available.</p>
+          <p>I study Computer &amp; Communication Engineering at Alexandria National University while strengthening my practical networking skills through Cisco training and project-based labs. I enjoy turning requirements into working topologies — planning IP addressing, segmenting networks with VLANs, configuring routing and redundancy, validating services, and troubleshooting connectivity methodically.</p>
+        </div>
         <div class="about-facts">
           <div class="fact"><span>01</span><h3>Learn by building</h3><p>Cisco Packet Tracer projects help me practice real configuration, verification, and troubleshooting workflows.</p></div>
           <div class="fact"><span>02</span><h3>Think in systems</h3><p>I connect addressing, segmentation, routing, redundancy, services, and security into one complete network design.</p></div>
@@ -112,20 +83,25 @@
 
     <section class="section projects-section" id="projects">
       <div class="container">
-        <div class="section-heading split"><div><span>02 / Selected work</span><h2>Projects that show<br><em>how I think.</em></h2></div><p>My portfolio is intentionally project-led. Certificates show what I studied; projects show what I can do.</p></div>
+        <div class="section-heading split">
+          <div><span>02 / Selected work</span><h2>Projects that show<br><em>how I think.</em></h2></div>
+          <p>My portfolio is intentionally project-led. Certificates show what I studied; projects show what I can do.</p>
+        </div>
         <div class="project-grid">
           <article class="project featured">
-            <div class="project-gallery mobile-safe-gallery" aria-label="Cisco Packet Tracer project screenshots">
-              <a class="mobile-safe-shot topology-shot" href="/assets/projects/network-topology.png?v=20260916-bgfix" target="_blank" rel="noopener" aria-label="Open enterprise topology screenshot" style="background-image:url('/assets/projects/network-topology.png?v=20260916-bgfix')">
-                <span>Enterprise topology</span>
-              </a>
-              <a class="mobile-safe-shot ospf-shot" href="/assets/projects/ospf-routing-table.png?v=20260916-bgfix" target="_blank" rel="noopener" aria-label="Open OSPF routing table screenshot" style="background-image:url('/assets/projects/ospf-routing-table.png?v=20260916-bgfix')">
-                <span>OSPF routing verification</span>
-              </a>
+            <div class="project-visual topology" aria-label="CSS network diagram for Cisco Packet Tracer project">
+              <div class="topo-lines"></div>
+              <span class="router">R1</span>
+              <span class="switch s1">SW1</span>
+              <span class="switch s2">SW2</span>
+              <span class="pc p1">PC</span>
+              <span class="pc p2">PC</span>
+              <span class="pc p3">SRV</span>
+              <span class="pc p4">PC</span>
             </div>
             <div class="project-body"><div class="project-num">01</div><h3>Enterprise Network Design &amp; Configuration</h3><p>Designed a three-building Cisco Packet Tracer network using VLSM, VLAN segmentation, multilayer switching, OSPF dynamic routing, HSRP redundancy, DHCP, network services, ACLs, and port security.</p><div class="tags"><span>Cisco Packet Tracer</span><span>OSPF</span><span>VLANs</span><span>HSRP</span><span>VLSM</span><span>ACLs</span></div><div class="project-footer"><span>Networking Lab</span><a href="https://github.com/omarsherif547/Enterprise-Network-Cisco-Packet-Tracer" target="_blank" rel="noreferrer">GitHub ↗</a></div></div>
           </article>
-          <article class="project"><div class="project-visual code-visual"><div class="code-lines"><span>01</span><b>ip route</b><span>192.168.20.0/24</span><b>via</b><span>10.0.0.2</span><br><span>02</span><b>show vlan</b><span>brief</span><br><span>03</span><b>show etherchannel</b></div></div><div class="project-body"><div class="project-num">02</div><h3>CCNA Network Labs</h3><p>A growing collection of focused labs for switching, routing, addressing, device access, and troubleshooting.</p><div class="tags"><span>CCNA</span><span>IPv4</span><span>Switching</span></div><div class="project-footer"><span>Ongoing</span></div></div></article>
+          <article class="project"><div class="project-visual code-visual"><div class="code-lines"><span>01</span><b>show ip route</b><span>OSPF routes</span><br><span>02</span><b>show vlan</b><span>brief</span><br><span>03</span><b>ping</b><span>end-to-end</span></div></div><div class="project-body"><div class="project-num">02</div><h3>CCNA Network Labs</h3><p>A growing collection of focused labs for switching, routing, addressing, device access, and troubleshooting.</p><div class="tags"><span>CCNA</span><span>IPv4</span><span>Switching</span></div><div class="project-footer"><span>Ongoing</span></div></div></article>
           <article class="project"><div class="project-visual robot-visual"><div class="robot-grid"></div><div class="robot-icon">⌁</div><div class="speed">23.3s</div></div><div class="project-body"><div class="project-num">03</div><h3>Line Follower Robot</h3><p>Competition robot using Arduino Nano, QTR 8-channel sensor, N30 motors and TB6612 driver — achieving a 23.3s recorded run.</p><div class="tags"><span>Arduino</span><span>Embedded</span><span>Robotics</span></div><div class="project-footer"><span>Minoan Robosport</span><span>1st place</span></div></div></article>
         </div>
       </div>
@@ -169,23 +145,11 @@
     if (window.location.search) {
       window.history.replaceState(null, '', window.location.pathname + window.location.hash);
     }
-
     const emailLink = document.getElementById('emailLink');
     if (emailLink) {
       emailLink.href = 'mailto:omaromarabdelbaki@gmail.com?subject=Portfolio%20Contact';
       emailLink.removeAttribute('target');
     }
-
-    document.querySelectorAll('.project-gallery img').forEach((img) => {
-      img.loading = 'eager';
-      img.decoding = 'async';
-      img.style.display = 'block';
-      img.style.width = '100%';
-      img.style.height = 'auto';
-      img.style.visibility = 'visible';
-      img.style.opacity = '1';
-    });
-
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.nav-links');
     menuToggle?.addEventListener('click', () => {
@@ -211,6 +175,5 @@
       reveal.forEach((el) => el.classList.add('visible'));
     }
   </script>
-
 </body>
 </html>
