@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260916-2" />
+  <link rel="stylesheet" href="styles.css?v=20260916-bgfix" />
 
   <style>
     /* Critical mobile fixes: keep project screenshots visible on phones */
@@ -33,6 +33,14 @@
       .project-shot img,.main-shot img,.project-shot-row img{width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;display:block!important;}
       .project-shot figcaption{font-size:9px!important;padding:7px 9px!important;}
     }
+
+    /* Final mobile image fix: display screenshots as background cards with fixed height */
+    .mobile-safe-gallery{display:flex!important;flex-direction:column!important;gap:14px!important;width:100%!important;padding:16px!important;overflow:visible!important;border-right:1px solid var(--line);background:linear-gradient(135deg,#08120f,#10231e)}
+    .mobile-safe-shot{display:block!important;width:100%!important;min-height:300px!important;background-color:#fff!important;background-repeat:no-repeat!important;background-position:center!important;background-size:contain!important;border:1px solid var(--line)!important;text-decoration:none!important;position:relative!important;overflow:hidden!important}
+    .mobile-safe-shot.ospf-shot{min-height:420px!important}
+    .mobile-safe-shot span{position:absolute;left:0;right:0;bottom:0;padding:8px 10px;color:var(--muted);font:600 10px/1.2 Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;background:var(--bg);border-top:1px solid var(--line)}
+    @media(max-width:900px){.mobile-safe-gallery{border-right:0!important;border-bottom:1px solid var(--line)!important}.mobile-safe-shot{min-height:220px!important}.mobile-safe-shot.ospf-shot{min-height:360px!important}}
+    @media(max-width:700px){.mobile-safe-gallery{padding:10px!important;gap:12px!important}.mobile-safe-shot{min-height:170px!important}.mobile-safe-shot.ospf-shot{min-height:300px!important}.mobile-safe-shot span{font-size:9px!important;padding:7px 9px!important}}
   </style>
 </head>
 <body>
@@ -107,21 +115,13 @@
         <div class="section-heading split"><div><span>02 / Selected work</span><h2>Projects that show<br><em>how I think.</em></h2></div><p>My portfolio is intentionally project-led. Certificates show what I studied; projects show what I can do.</p></div>
         <div class="project-grid">
           <article class="project featured">
-            <div class="project-gallery" aria-label="Cisco Packet Tracer project screenshots">
-              <figure class="project-shot main-shot">
-                <img src="assets/projects/network-topology.png?v=20260916-2" alt="Three-building Cisco Packet Tracer enterprise network topology" loading="eager" decoding="async">
-                <figcaption>Enterprise topology</figcaption>
-              </figure>
-              <div class="project-shot-row">
-                <figure class="project-shot">
-                  <img src="assets/projects/ospf-routing-table.png?v=20260916-2" alt="Cisco router routing table showing OSPF learned routes" loading="eager" decoding="async">
-                  <figcaption>OSPF routing verification</figcaption>
-                </figure>
-                <figure class="project-shot">
-                  <img src="assets/projects/vlan-configuration.png?v=20260916-2" alt="Cisco show vlan brief output with VLANs 10, 20, and 30" loading="eager" decoding="async">
-                  <figcaption>VLAN verification</figcaption>
-                </figure>
-              </div>
+            <div class="project-gallery mobile-safe-gallery" aria-label="Cisco Packet Tracer project screenshots">
+              <a class="mobile-safe-shot topology-shot" href="/assets/projects/network-topology.png?v=20260916-bgfix" target="_blank" rel="noopener" aria-label="Open enterprise topology screenshot" style="background-image:url('/assets/projects/network-topology.png?v=20260916-bgfix')">
+                <span>Enterprise topology</span>
+              </a>
+              <a class="mobile-safe-shot ospf-shot" href="/assets/projects/ospf-routing-table.png?v=20260916-bgfix" target="_blank" rel="noopener" aria-label="Open OSPF routing table screenshot" style="background-image:url('/assets/projects/ospf-routing-table.png?v=20260916-bgfix')">
+                <span>OSPF routing verification</span>
+              </a>
             </div>
             <div class="project-body"><div class="project-num">01</div><h3>Enterprise Network Design &amp; Configuration</h3><p>Designed a three-building Cisco Packet Tracer network using VLSM, VLAN segmentation, multilayer switching, OSPF dynamic routing, HSRP redundancy, DHCP, network services, ACLs, and port security.</p><div class="tags"><span>Cisco Packet Tracer</span><span>OSPF</span><span>VLANs</span><span>HSRP</span><span>VLSM</span><span>ACLs</span></div><div class="project-footer"><span>Networking Lab</span><a href="https://github.com/omarsherif547/Enterprise-Network-Cisco-Packet-Tracer" target="_blank" rel="noreferrer">GitHub ↗</a></div></div>
           </article>
